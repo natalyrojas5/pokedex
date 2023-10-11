@@ -8,6 +8,13 @@
   align-items: center;
   gap: 0.6rem;
 }
+
+@media only screen and (max-width: 750px) {
+  .c-search {
+    flex-direction: column;
+  }
+}
+
 .c-search input {
   width: 100%;
   padding: 0.6rem;
@@ -20,4 +27,11 @@
 
 .c-search button {
   max-width: 100px;
+  color: #414141;
+}
+
+@media only screen and (max-width: 750px) {
+  .c-search button {
+    max-width: 100%;
+  }
 }

@@ -1,7 +1,6 @@
 const { actionType } = require("../utils");
 
 export const reducer = (state, action) => {
-  debugger
   switch (action.type) {
     case actionType.ADD_POKEMON:
       return {

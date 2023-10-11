@@ -1,0 +1,59 @@
+.c-card-pokemon {
+  padding: 1.5rem;
+  background-color: var(--c-white-200);
+  overflow: hidden;
+}
+
+.c-card-pokemon .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.625rem;
+  margin-bottom: 1rem;
+}
+.c-card-pokemon .id {
+  font-size: 1.4rem;
+}
+.c-card-pokemon .name {
+  text-transform: uppercase;
+}
+
+.c-card-pokemon img {
+  max-width: 354px;
+  max-height: 354px;
+  object-fit: cover;
+  background-color: var(--c-white);
+  width: 100%;
+}
+
+.c-card-pokemon,
+.c-card-pokemon img {
+  border-radius: 1rem;
+}
+
+.c-card-pokemon .decoration {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  padding-bottom: 0;
+}
+
+.c-card-pokemon .decoration .circle {
+  width: 35px;
+  height: 35px;
+  background-color: var(--c-red-500);
+}
+
+.c-card-pokemon .decoration .lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.c-card-pokemon .decoration .line {
+  width: 55px;
+  height: 6.5px;
+  background-color: var(--c-black);
+  border-radius: 1rem;
+}

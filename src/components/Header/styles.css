@@ -1,0 +1,72 @@
+.c-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.2rem;
+
+  margin-bottom: 1.2rem;
+}
+
+@media only screen and (max-width: 750px) {
+  .c-header {
+    padding: 0;
+    gap: 0.5rem;
+  }
+}
+
+.c-header .title {
+  font-size: 2.4rem;
+}
+
+@media only screen and (max-width: 750px) {
+  .c-header .title {
+    font-size: 1.8rem;
+  }
+}
+
+.c-header .circles {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.c-header .circle-main {
+  width: 3.125rem;
+  height: 3.125rem;
+  background-color: var(--c-white-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.4rem;
+}
+
+.c-header .circle-b-cyan {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  background-color: var(--c-cyan);
+}
+
+.c-header div[class^="circle-s"] {
+  width: 20px;
+  height: 20px;
+  margin-top: 0.4rem;
+}
+
+.c-header .circle-s-red {
+  background-color: var(--c-red-500);
+}
+
+.c-header .circle-s-yellow {
+  background-color: var(--c-yellow-500);
+}
+
+.c-header .circle-s-green {
+  background-color: var(--c-green-500);
+}
+
+.c-header-line {
+  width: 100%;
+  height: 3.8px;
+  background-color: var(--c-black);
+  border-radius: 20rem;
+  margin-bottom: 2rem;
+}

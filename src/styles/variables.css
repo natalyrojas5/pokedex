@@ -1,0 +1,13 @@
+:root {
+  --c-red: #ef4949;
+  --c-red-500: #e21f1f;
+  --c-black: #2a2e31;
+  --c-white: #fff;
+  --c-white-200: #f7f7f7;
+  --c-cyan: #57d7f4;
+  --c-cyan-300: #d1f3fb;
+  --c-yellow-500: #ffff00;
+  --c-yellow-200: #ffedad;
+  --c-green-500: #adff2f;
+  --bg-app: #303a43;
+}

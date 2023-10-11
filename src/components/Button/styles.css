@@ -1,0 +1,15 @@
+.c-button {
+  padding: 0.8rem 1rem;
+  background-color: var(--c-cyan);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 550;
+}
+
+.c-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}

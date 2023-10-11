@@ -1,0 +1,23 @@
+.c-search {
+  overflow: hidden;
+  padding: 0.625rem;
+  background-color: var(--c-white);
+  margin-top: 1rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.c-search input {
+  width: 100%;
+  padding: 0.6rem;
+  height: 100%;
+  border-radius: 0.5rem;
+  outline: none;
+  background-color: var(--c-cyan-300);
+  color: #414141;
+}
+
+.c-search button {
+  max-width: 100px;
+}

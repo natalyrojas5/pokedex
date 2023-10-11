@@ -22,12 +22,12 @@
   border-radius: 0.5rem;
   outline: none;
   background-color: var(--c-cyan-300);
-  color: #414141;
+  color: var(--c-black);
 }
 
 .c-search button {
   max-width: 100px;
-  color: #414141;
+  color: var(--c-black);
 }
 
 @media only screen and (max-width: 750px) {

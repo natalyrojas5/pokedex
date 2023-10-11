@@ -13,4 +13,7 @@
     gap: 1rem;
     padding: 0;
   }
+  .c-pagination button {
+    color: var(--c-black);
+  }
 }

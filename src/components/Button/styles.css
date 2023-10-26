@@ -1,6 +1,7 @@
 .c-button {
   padding: 0.8rem 1rem;
   background-color: var(--c-cyan);
+  color: var(--c-black);
   font-size: 0.9rem;
   text-transform: uppercase;
   cursor: pointer;

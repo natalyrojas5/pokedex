@@ -1,0 +1,29 @@
+.grids {
+  margin-top: 1rem;
+  max-height: 8rem;
+  overflow: auto;
+}
+
+@media only screen and (max-width: 750px) {
+  .grids {
+    max-height: 100%;
+  }
+}
+
+.list-pokemons {
+  overflow: auto;
+  max-height: 34rem;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+@media only screen and (max-width: 750px) {
+  .list-pokemons {
+    max-height: 100%;
+    padding: 0;
+  }
+}
+
+.list-pokemons .c-card-pokemon {
+  margin-bottom: 1rem;
+}

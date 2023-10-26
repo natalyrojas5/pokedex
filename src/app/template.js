@@ -6,7 +6,9 @@ const Template = ({ children }) => {
     <main className='app'>
       <Header />
       <PokemonProvider>
-        {children}
+        <section className="app-body">
+          {children}
+        </section>
       </PokemonProvider>
     </main>
   )

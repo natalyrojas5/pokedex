@@ -1,8 +1,8 @@
-const { actionType } = require("../utils");
+const { types } = require("./types");
 
 export const reducer = (state, action) => {
   switch (action.type) {
-    case actionType.ADD_POKEMON:
+    case types.ADD_POKEMON:
       return {
         ...state, pokemon:
         {
@@ -10,13 +10,20 @@ export const reducer = (state, action) => {
           ...action.payload
         }
       }
-    case actionType.UPDATE_PAGINATION:
+
+    case types.ADD_POKEMONS:
       return {
-        ...state, pagination:
-          { ...state.pagination, ...action.payload }
+        ...state, pokemons:
+        {
+          ...state.pokemons,
+          data: [
+            ...action.payload.data,
+          ],
+          limit: action.payload.limit,
+        }
       }
 
-    case actionType.UPDATE_TEXT_SEARCH:
+    case types.UPDATE_TEXT_SEARCH:
       return {
         ...state,
         search: {
@@ -24,7 +31,7 @@ export const reducer = (state, action) => {
           name: action.payload
         }
       }
-    case actionType.ADD_MESSAGE:
+    case types.ADD_MESSAGE:
 
       return {
         ...state,
@@ -32,7 +39,7 @@ export const reducer = (state, action) => {
           text: action.payload
         }
       }
-    case actionType.RESET_MESSAGE:
+    case types.RESET_MESSAGE:
       return {
         ...state,
         message: {

@@ -1,7 +1,7 @@
 'use client'
 
 import { createContext, useReducer } from 'react';
-import { initialState, reducer } from './store';
+import { initialState, reducer } from '@/store';
 
 export const PokemonContext = createContext({});
 

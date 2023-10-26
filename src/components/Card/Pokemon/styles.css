@@ -18,9 +18,29 @@
   text-transform: uppercase;
 }
 
+.c-card-pokemon .pokemon {
+  position: relative;
+}
+
+.c-card-pokemon .btn-see-more {
+  position: absolute;
+  background-color: var(--c-orange-500);
+  box-shadow: 0px 5px 0px 0px #982626, 0px 0px 5px 0px rgba(120, 120, 120, 0.4);
+  right: 1rem;
+  max-width: 150px;
+  bottom: 1.6rem;
+}
+.c-card-pokemon .btn-see-more:active {
+  top: 5px;
+  box-shadow: 0px 5px 0px 0px 982626;
+  bottom: 1rem;
+  top: 18rem;
+}
+
 .c-card-pokemon img {
   max-width: 354px;
-  max-height: 354px;
+  min-height: 22.125rem;
+  height: 100%;
   object-fit: cover;
   background-color: var(--c-white);
   width: 100%;

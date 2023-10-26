@@ -1,0 +1,19 @@
+.c-grid {
+  margin-top: 1rem;
+}
+
+.c-grid > .title {
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.c-grid .items {
+  display: flex;
+  gap: 1rem;
+  overflow: auto;
+}
+
+.c-grid .line {
+  height: 1.2px;
+  background-color: var(--c-black);
+}

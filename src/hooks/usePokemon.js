@@ -1,83 +1,34 @@
 import { useContext } from "react";
+
+import { types } from "@/store";
 import { PokemonContext } from "@/context";
-import { actionType } from "@/context/utils";
-
 import { ServicesPokemon } from "@/services";
+import { useSearch } from "./useSearch";
 
-const usePokemon = () => {
-  const { dispatch, state: { search } } = useContext(PokemonContext);
+export const usePokemon = () => {
+  const { dispatch } = useContext(PokemonContext);
+  const { setMessage } = useSearch();
 
-  const getProfile = async ({ offset }) => {
-    const response = await ServicesPokemon.getPagination({ offset });
-    const { isOk, name, ...res } = response;
-    if (isOk && name) {
-      const { isOk, ...resPoke } = await ServicesPokemon.getDetails({ name })
-      if (!isOk) return
-      dispatch({
-        type: actionType.UPDATE_PAGINATION,
-        payload: { ...res, offset: parseInt(offset) }
-      });
-      dispatch({
-        type: actionType.ADD_POKEMON,
-        payload: { ...resPoke }
+  const getPokemon = async ({ pokemon }) => {
+    const { isOk, ...resPoke } = await ServicesPokemon.getPokemon({ name: pokemon })
 
-      })
-    }
-  }
-
-  const setMessage = (text) => {
     dispatch({
-      type: actionType.ADD_MESSAGE,
-      payload: text
-    });
-    setTimeout(() => {
-      dispatch({
-        type: actionType.RESET_MESSAGE,
-      });
-      dispatch({
-        type: actionType.UPDATE_TEXT_SEARCH,
-        payload: '',
-      })
-    }, 3000);
-  }
-
-  const getSearchProfile = async () => {
-    const name = search.name;
-    const { isOk, ...resPoke } = await ServicesPokemon.getDetails({ name })
-    if (isOk) {
-      const offset = resPoke.id - 1;
-      const response = await ServicesPokemon.getPagination({ offset });
-      const { isOk, name, ...res } = response;
-      if (!isOk) return
-      dispatch({
-        type: actionType.UPDATE_PAGINATION,
-        payload: { ...res, offset }
-      });
-      dispatch({
-        type: actionType.ADD_POKEMON,
-        payload: { ...resPoke }
-
-      })
-      return
-    }
-
-    setMessage('No se encontró pokémon: ' + name);
-
-  }
-
-  const setTextSearch = ({ target }) => {
-    const { value = '' } = target;
-    dispatch({
-      type: actionType.UPDATE_TEXT_SEARCH,
-      payload: value,
+      type: types.ADD_POKEMON,
+      payload: { ...resPoke }
     })
+  };
+
+  const isValidatePokemon = async ({ pokemon }) => {
+    const { isOk } = await ServicesPokemon.getPokemon({ name: pokemon, validatePokemon: true });
+    if (!isOk) {
+      const msg = `El pokemón ${pokemon} no fue encontrado`;
+      setMessage(msg)
+    }
+    return isOk;
   }
 
   return {
-    getProfile,
-    setTextSearch,
-    getSearchProfile
+    getPokemon,
+    isValidatePokemon,
   }
 }
-
-export default usePokemon

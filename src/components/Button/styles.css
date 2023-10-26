@@ -6,6 +6,22 @@
   cursor: pointer;
   width: 100%;
   font-weight: 550;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 5px 0px 0px #1d7f8a, 0px 0px 5px 0px rgba(120, 120, 120, 0.4);
+  transition: all 0.16s;
+  position: relative;
+  height: 2.6rem;
+}
+
+.c-button:focus {
+  outline: none;
+}
+
+.c-button:active {
+  box-shadow: 0px 5px 0px 0px #1d7f8a;
+  top: 2px;
+  bottom: 0;
 }
 
 .c-button.disabled {

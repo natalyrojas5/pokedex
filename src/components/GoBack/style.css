@@ -1,0 +1,20 @@
+.c-go-back {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: 1rem;
+}
+
+.c-go-back .btn {
+  max-width: 7.25rem;
+  padding: 0.375rem;
+}
+
+.c-go-back .title {
+  font-size: 1.8rem;
+}
+
+.c-go-back .title::first-letter {
+  text-transform: uppercase;
+}

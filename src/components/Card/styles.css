@@ -1,0 +1,31 @@
+.c-card {
+  background-color: var(--c-white-200);
+  padding: 0.8rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.c-card.c-card-species {
+  max-width: 10rem;
+  width: 100%;
+}
+
+.c-card.c-card-species .title {
+  font-size: 1.1rem;
+}
+
+.c-card.c-card-ability .title {
+  margin-bottom: 0.4rem;
+}
+
+.c-card .texts {
+  display: flex;
+  flex-direction: row;
+  width: 9.5rem;
+}
+
+.c-card .texts .title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}

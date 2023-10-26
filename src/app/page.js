@@ -1,4 +1,4 @@
-import { ViewProfile } from '@/views'
+import { ViewPokemons } from '@/views'
 
-const PagePokemonProfile = () => <ViewProfile />;
-export default PagePokemonProfile;
+const PagePokemons = () => <ViewPokemons />;
+export default PagePokemons;

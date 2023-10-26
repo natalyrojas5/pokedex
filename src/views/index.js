@@ -1,2 +1,3 @@
-export * from "./Profile"
+export * from "./Pokemons"
+export * from "./Pokemon"
 

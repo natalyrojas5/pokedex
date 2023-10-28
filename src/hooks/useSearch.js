@@ -24,10 +24,12 @@ export const useSearch = () => {
 
   const setTextSearch = ({ target }) => {
     const { value = '' } = target;
-    dispatch({
-      type: types.UPDATE_TEXT_SEARCH,
-      payload: value,
-    })
+    if (value) {
+      dispatch({
+        type: types.UPDATE_TEXT_SEARCH,
+        payload: value,
+      })
+    }
   }
   return {
     setMessage,

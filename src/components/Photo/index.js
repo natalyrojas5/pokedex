@@ -1,4 +1,3 @@
-// import './styles.css';
 import { defaultImg } from '@/utils';
 
 export const Photo = ({ img = defaultImg }) => {

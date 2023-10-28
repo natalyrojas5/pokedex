@@ -1,11 +1,11 @@
 const { apiService } = require("@/api")
 
 const getPokemon = async ({ name, validatePokemon = false }) => {
-  const endpoint = `/${name}`;
+  const pokemon = name.toLowerCase();
+  const endpoint = `/${pokemon}`;
   const res = await apiService({ endpoint });
   const isOk = res.ok;
-  const JSON = { isOk, name };
-
+  const JSON = { isOk, name: pokemon };
   if (isOk && !validatePokemon) {
     const { sprites, order, id, abilities, species, types } = await res.json();
     JSON.photo = sprites.other.home.front_default;

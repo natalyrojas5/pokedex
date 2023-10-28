@@ -6,8 +6,7 @@ import { useRouter } from 'next/navigation';
 import { PokemonContext } from "@/context";
 
 import '../styles.css';
-import { CardPokemon } from "@/components";
-import { Button, Message, Search } from "@/components";
+import { Button, Message, Search, CardPokemon } from "@/components";
 
 import { usePokemon, usePokemons, useSearch } from "@/hooks";
 

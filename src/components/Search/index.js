@@ -1,5 +1,5 @@
-import { Button } from '../Button';
 import './styles.css';
+import { Button } from '../Button';
 
 export const Search = ({ onChange, onSearch, value }) => {
   return (

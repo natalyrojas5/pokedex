@@ -4,7 +4,7 @@ import { useContext, useEffect } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 
 import '../styles.css';
-import { CardPokemon, CARD_NAMES, GoBack, Grid } from '@/components';
+import { CardPokemon, CARD_NAMES, GoBack, Grid, Message } from '@/components';
 import { PokemonContext } from '@/context';
 import { usePokemon } from '@/hooks';
 
@@ -32,44 +32,46 @@ export const ViewPokemon = () => {
         onGoBack={onGoBack}
       />
       {
-        pokemon.name &&
-        (
-          <>
-            <CardPokemon
-              name={pokemon.name}
-              img={pokemon.photo}
-              hasBtnDetail={false}
-              hasDecoration={false}
-            />
-            <section className='grids scroll'>
-              {
-                pokemon.species &&
-                <Grid
-                  title="Especie"
-                  itemName={CARD_NAMES.SPECIES}
-                  items={pokemon.species}
-                />
-              }
-              {
-                pokemon.abilities &&
-                <Grid
-                  title="Habilidades"
-                  itemName={CARD_NAMES.ABILITY}
-                  items={pokemon.abilities}
-                />
-              }
-              {
-                pokemon.types &&
-                <Grid
-                  title="Tipos"
-                  itemName={CARD_NAMES.TYPE}
-                  items={pokemon.types}
-                  showLine={false}
-                />
-              }
-            </section>
-          </>
-        )
+        pokemon.name ?
+          (
+            <>
+              <CardPokemon
+                name={pokemon.name}
+                img={pokemon.photo}
+                hasBtnDetail={false}
+                hasDecoration={false}
+              />
+              <section className='grids scroll'>
+                {
+                  pokemon.species &&
+                  <Grid
+                    title="Especie"
+                    itemName={CARD_NAMES.SPECIES}
+                    items={pokemon.species}
+                  />
+                }
+                {
+                  pokemon.abilities &&
+                  <Grid
+                    title="Habilidades"
+                    itemName={CARD_NAMES.ABILITY}
+                    items={pokemon.abilities}
+                  />
+                }
+                {
+                  pokemon.types &&
+                  <Grid
+                    title="Tipos"
+                    itemName={CARD_NAMES.TYPE}
+                    items={pokemon.types}
+                    showLine={false}
+                  />
+                }
+              </section>
+            </>
+          )
+          :
+          <Message text="No se encontró Pokemón" />
       }
     </>
   )

@@ -18,18 +18,17 @@ export const useSearch = () => {
         type: types.UPDATE_TEXT_SEARCH,
         payload: '',
       })
-    }, 3000);
+    }, 4500);
   }
 
 
   const setTextSearch = ({ target }) => {
     const { value = '' } = target;
-    if (value) {
-      dispatch({
-        type: types.UPDATE_TEXT_SEARCH,
-        payload: value,
-      })
-    }
+    dispatch({
+      type: types.UPDATE_TEXT_SEARCH,
+      payload: value,
+    })
+
   }
   return {
     setMessage,

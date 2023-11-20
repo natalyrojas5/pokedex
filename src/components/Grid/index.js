@@ -1,23 +1,8 @@
 import './styles.css';
-import { CardAbility, CardPokemon, CardSpecies, CardType } from "../Card"
-
-export const CARD_ITEMS = {
-  'POKEMON': CardPokemon,
-  'ABILITY': CardAbility,
-  'SPECIES': CardSpecies,
-  'TYPE': CardType
-}
-
-export const CARD_NAMES = {
-  'POKEMON': 'POKEMON',
-  'ABILITY': 'ABILITY',
-  'SPECIES': 'SPECIES',
-  'TYPE': 'TYPE',
-}
+import { CARD_ITEMS } from '@/types';
 
 export const Grid = ({ title, itemName, items = [], showLine = true }) => {
   const Component = CARD_ITEMS[itemName];
-
   return (
     <section className='c-grid scroll'>
       <h3 className='title'>{title}</h3>

@@ -67,7 +67,7 @@ export const ViewPokemons = () => {
         )
       }
 
-      <Button text="Mostrar más" onClick={onGoMorePokemons} />
+      <Button text="Mostrar 5 más" onClick={onGoMorePokemons} />
     </>
   );
 }

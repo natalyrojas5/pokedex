@@ -4,9 +4,10 @@ import { useContext, useEffect } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 
 import '../styles.css';
-import { CardPokemon, CARD_NAMES, GoBack, Grid, Message } from '@/components';
+import { CardPokemon, GoBack, Grid, Message } from '@/components';
 import { PokemonContext } from '@/context';
 import { usePokemon } from '@/hooks';
+import { CARD_NAMES } from '@/types';
 
 
 export const ViewPokemon = () => {
@@ -76,4 +77,3 @@ export const ViewPokemon = () => {
     </>
   )
 }
-

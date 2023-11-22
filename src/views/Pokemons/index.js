@@ -50,24 +50,25 @@ export const ViewPokemons = () => {
       {
         Array.isArray(pokemons.data) && pokemons.data.length > 0 &&
         (
-          <section className="list-pokemons scroll">
-            {
-              pokemons.data.map((pokemon, index) => (
-                <CardPokemon
-                  key={index}
-                  img={pokemon.photo}
-                  name={pokemon.name}
-                  id={pokemon.id}
-                  onShowDetail={() => onGoPagePokemon({ pokemon: pokemon.name })}
-                />
-              ))
-            }
+          <>
+            <section className="list-pokemons scroll">
+              {
+                pokemons.data.map((pokemon, index) => (
+                  <CardPokemon
+                    key={index}
+                    img={pokemon.photo}
+                    name={pokemon.name}
+                    id={pokemon.id}
+                    onShowDetail={() => onGoPagePokemon({ pokemon: pokemon.name })}
+                  />
+                ))
+              }
 
-          </section>
+            </section>
+            <Button text="Mostrar 5 más" onClick={onGoMorePokemons} />
+          </>
         )
       }
-
-      <Button text="Mostrar 5 más" onClick={onGoMorePokemons} />
     </>
   );
 }
